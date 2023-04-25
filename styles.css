@@ -1,6 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;1,400&display=swap");
 
-
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  border-radius: 15px;
+  letter-spacing: .5px;
+}
 html {
     box-sizing: border-box;
   }
@@ -88,7 +94,7 @@ body {
     justify-content: space-between;
     flex-wrap: wrap;
     align-items: center;
-    background-color: #0909ad;
+    background-color: #7c7cfa;
     padding: 10px 20px;
 }
 .searchBox input{
@@ -121,4 +127,8 @@ body {
     font-size:1rem;
     padding-right: 10px;
     background-color:#e1dede;
+}
+
+div#result {
+  height:10vh;
 }

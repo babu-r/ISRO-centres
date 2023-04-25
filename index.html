@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel='stylesheet' type='text/css' media='screen' href='styles.css'>
-    <script src='App.js'></script>
+    <script defer src='App.js'></script>
 </head>
 <body>
     <div class="main">
@@ -16,16 +16,16 @@
         <div>Search for ISRO centers based on place, stat and name</div>
         <div class="section">
             <div class="searchBox">
-                <input type="text" placeholder="Type Here.......">
+                <input type="text" id="search-input" placeholder="Type Here.......">
                 <button class="searchBtn"><i class="fa-solid fa-search"></i></button>
             </div>
             <div class="button-container">
-                <button class="Place cityBtn button-29">CITY</button>
-                <button class="State stateBtn button-29">STATE</button>
-                <button class="name centerBtn button-29">CENTER</button>
+                <button class="Place cityBtn button-29" id="city">CITY</button>
+                <button class="State stateBtn button-29" id="state">STATE</button>
+                <button class="name centerBtn button-29" id="center">CENTER</button>
             </div>
         </div>
-        <div class="result"> </div>
+        <div class="result" id="result"></div>
     </div>    
 </body>
 </html>
