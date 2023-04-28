@@ -132,3 +132,8 @@ body {
 div#result {
   height:10vh;
 }
+.center, .city, .state {
+    width: 30%;
+    height: auto;
+    padding: 10px;
+}
