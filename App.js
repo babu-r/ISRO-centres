@@ -77,7 +77,6 @@ function searchData() {
     
 }
 function searchByName(ele, val) {
-    let i = 1;
     for (let center of data.centres) {
       if (center.name.toLowerCase().includes(val.toLowerCase())) {
         ele += `
@@ -100,9 +99,8 @@ function searchByName(ele, val) {
     result.innerHTML = ele;
 }
 function searchByCity(ele, val) {
-    let i = 1;
     for (let center of data.centres) {
-      if (center.City.toLowerCase().includes(val.toLowerCase())) {
+      if (center.Place.toLowerCase().includes(val.toLowerCase())) {
         ele += `
             <div class="searchItems">
                 <div class="center">
@@ -123,8 +121,8 @@ function searchByCity(ele, val) {
     result.innerHTML = ele;
 }
 function searchByState(ele, val) {
-    let i = 1;
     for (let center of data.centres) {
+        console.log(center);
       if (center.State.toLowerCase().includes(val.toLowerCase())) {
         ele += `
             <div class="searchItems">
