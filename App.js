@@ -17,6 +17,7 @@ async function getdata(url) {
 }
 getdata(url);
 
+
 function displayData(data) {
     let ele = "";
     for (let center of data.centres) {
@@ -51,7 +52,6 @@ searchCity.addEventListener("click", () => {
 
 searchState.addEventListener("click", () => {
     var element = searchState;
-    //console.log(searchInput.value);
     flag = "state";
     searchData();
 });
@@ -76,6 +76,10 @@ function searchData() {
 }
 
 function searchByName(ele, val) {
+    if (val === "") {
+        alert("Please enter something.");
+        return;
+    }
     for (let center of data.centres) {
         if (center.name.toLowerCase().includes(val.toLowerCase())) {
             ele += `
@@ -96,8 +100,16 @@ function searchByName(ele, val) {
         }
     }
     result.innerHTML = ele;
+    if (ele === "") {
+        result.innerHTML = `Nothing to Display, Please try some other characters!!!`;
+        return;
+    }
 }
 function searchByCity(ele, val) {
+    if (val === "") {
+        alert("Please enter something.");
+        return;
+    }
     for (let center of data.centres) {
         if (center.Place.toLowerCase().includes(val.toLowerCase())) {
             ele += `
@@ -118,8 +130,16 @@ function searchByCity(ele, val) {
         }
     }
     result.innerHTML = ele;
+    if (ele === "") {
+        result.innerHTML = `Nothing to Display, Please try some other characters!!!`;
+        return;
+    }
 }
 function searchByState(ele, val) {
+    if (val === "") {
+        alert("Please enter something.");
+        return;
+    }
     for (let center of data.centres) {
         if (center.State.toLowerCase().includes(val.toLowerCase())) {
             ele += `
@@ -140,4 +160,8 @@ function searchByState(ele, val) {
         }
     }
     result.innerHTML = ele;
+    if (ele === "") {
+        result.innerHTML = `Nothing to Display, Please try some other characters!!!`;
+        return;
+    }
 }
