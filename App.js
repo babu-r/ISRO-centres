@@ -64,9 +64,8 @@ searchCenter.addEventListener("click", () => {
 
 function searchData() {
     var val = searchInput.value;
-    console.log(val);
     let ele = ``;
-  
+    
     if (flag === "name") {
       searchByName(ele, val);
     } else if (flag === "city") {
@@ -74,8 +73,8 @@ function searchData() {
     } else if (flag === "state") {
       searchByState(ele, val);
     }
-    
 }
+
 function searchByName(ele, val) {
     for (let center of data.centres) {
       if (center.name.toLowerCase().includes(val.toLowerCase())) {
@@ -122,7 +121,6 @@ function searchByCity(ele, val) {
 }
 function searchByState(ele, val) {
     for (let center of data.centres) {
-        console.log(center);
       if (center.State.toLowerCase().includes(val.toLowerCase())) {
         ele += `
             <div class="searchItems">
