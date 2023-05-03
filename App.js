@@ -77,30 +77,30 @@ function searchData() {
 
 function searchByName(ele, val) {
     for (let center of data.centres) {
-      if (center.name.toLowerCase().includes(val.toLowerCase())) {
-        ele += `
-            <div class="searchItems">
-                <div class="center">
-                    <h4>CENTER</h4>
-                    <p>${center.name}</p>
-                </div>
-                <div class="city">
-                    <h4>CITY</h4>
-                    <p>${center.Place}</p>
-                </div>
-                <div class="state">
-                    <h4>STATE</h4>
-                    <p>${center.State}</p>
-                </div>
-            </div>`;
-      }
+        if (center.name.toLowerCase().includes(val.toLowerCase())) {
+            ele += `
+                <div class="searchItems">
+                    <div class="center">
+                        <h4>CENTER</h4>
+                        <p>${center.name}</p>
+                    </div>
+                    <div class="city">
+                        <h4>CITY</h4>
+                        <p>${center.Place}</p>
+                    </div>
+                    <div class="state">
+                        <h4>STATE</h4>
+                        <p>${center.State}</p>
+                    </div>
+                </div>`;
+        }
     }
     result.innerHTML = ele;
 }
 function searchByCity(ele, val) {
     for (let center of data.centres) {
-      if (center.Place.toLowerCase().includes(val.toLowerCase())) {
-        ele += `
+        if (center.Place.toLowerCase().includes(val.toLowerCase())) {
+            ele += `
             <div class="searchItems">
                 <div class="center">
                     <h4>CENTER</h4>
@@ -115,14 +115,14 @@ function searchByCity(ele, val) {
                     <p>${center.State}</p>
                 </div>
             </div>`;
-      }
+        }
     }
     result.innerHTML = ele;
 }
 function searchByState(ele, val) {
     for (let center of data.centres) {
-      if (center.State.toLowerCase().includes(val.toLowerCase())) {
-        ele += `
+        if (center.State.toLowerCase().includes(val.toLowerCase())) {
+            ele += `
             <div class="searchItems">
                 <div class="center">
                     <h4>CENTER</h4>
@@ -137,7 +137,7 @@ function searchByState(ele, val) {
                     <p>${center.State}</p>
                 </div>
             </div>`;
-      }
+        }
     }
     result.innerHTML = ele;
 }
