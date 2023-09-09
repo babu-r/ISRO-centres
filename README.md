@@ -25,7 +25,7 @@
     - When no category is selected, all the centre's card will render by default.
     - When any category is selected and there is input in the search field, then only selected cards will render , like in the above given example only the cards which have their state Rajasthan will render .
 
-## Project Checkpoints
+## Project Checkpoints functionalities 
 
 - The search button
 - The city button
